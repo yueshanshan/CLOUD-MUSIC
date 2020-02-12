@@ -24,7 +24,7 @@ module.exports = {
     port: 3001,  // 设置启动时运行端口
     contentBase: 'src',  // 指定托管的根目录
     hot: true, // 启动热更新   第一步
-    // host: '192.168.23.128'
+    // host: '0.0.0.0'
   },
   plugins: [  // 配置插件的节点
     // 热更新的第三步

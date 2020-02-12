@@ -25,7 +25,6 @@ export default {
     player
   },
   mounted() {
-    // console.log(window.document.cookie)
   },
 };
 </script>

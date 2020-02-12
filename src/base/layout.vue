@@ -43,7 +43,7 @@ export default {
 .setting {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 52px;
   width: 100%;
   height: 42px;
   display: flex;

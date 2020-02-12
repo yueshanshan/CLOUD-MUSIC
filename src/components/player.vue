@@ -3,7 +3,10 @@
     <!-- 播放界面 -->
     <transition name="full">
       <div class="normal" v-show="fullScreen">
-        <div class="b-color" :style="{backgroundImage:`url(${songs&&songs.al.picUrl})`, backgroundSize:`100% 100%`}"></div>
+        <div
+          class="b-color"
+          :style="{backgroundImage:`url(${songs&&songs.al.picUrl})`, backgroundSize:`100% 100%`}"
+        ></div>
         <div class="b-mask"></div>
         <!-- 头部 -->
         <div class="head">
@@ -41,7 +44,7 @@
               <span :class="['fav','icon-aixin']" :style="{color:isFav}" @click.stop="_addFavSong"></span>
               <span class="down icon-xiazai3" @click.stop="showDownBox">
                 <transition name="down">
-                <span class="source" v-if="showSource">歌曲暂时无法下载</span>
+                  <span class="source" v-if="showSource">歌曲暂时无法下载</span>
                 </transition>
               </span>
               <span class="comment icon-pinglun2" @click="toComment">
@@ -123,7 +126,7 @@
         <div class="title">
           <div class="name">
             <h3>{{songs&&songs.name}}</h3>
-            <p>{{isplay? minilyric: songs&&songs.ar[0].name}}</p>
+            <p>{{isplay? minilyric : songs&&songs.ar[0].name}}</p>
           </div>
           <span
             :class="['icon', isplay ? 'icon-zanting2' : 'icon-bofang1']"
@@ -232,7 +235,6 @@ export default {
       } else {
         return "#EEE";
       }
-      // this.$forceupdate()
     }
   },
   watch: {
@@ -368,11 +370,11 @@ export default {
           }
         });
     },
-    showDownBox(){
-      this.showSource = true
+    showDownBox() {
+      this.showSource = true;
       setTimeout(() => {
-        this.showSource = false
-      },2000)
+        this.showSource = false;
+      }, 2000);
     },
     // 方法
     _addFavSong() {
@@ -654,10 +656,10 @@ export default {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(0,0,0,0.4); 
+      background: rgba(0, 0, 0, 0.4);
     }
     .head {
-      height: 3.2rem;
+      height: 8%;
       display: flex;
       .back {
         width: 13%;
@@ -697,7 +699,7 @@ export default {
     }
     .songBox {
       width: 100%;
-      height: 550px;
+      height: 82%;
       .coverbox {
         width: 100%;
         height: 100%;
@@ -814,7 +816,7 @@ export default {
               &.down-enter-active,
               &.down-leave-active {
                 transition: all 0.4s;
-              } 
+              }
             }
           }
           .comment {
@@ -914,7 +916,7 @@ export default {
     }
     .foot {
       width: 100%;
-      height: 4rem;
+      height: 10%;
       padding: 0.4rem 0.8rem 0;
       box-sizing: border-box;
       .progress {
